@@ -31,7 +31,7 @@
     <li>Your location never leaves your phone. We use it on the device to sort sessions by distance, and only after you've allowed it.</li>
     <li>Other members see your profile. They never see your birthdate, your notification settings or your device's push token.</li>
     <li>No ads, no trackers, no analytics companies.</li>
-    <li>Delete your account in the app and it is removed from our database straight away, with everything in it.</li>
+    <li>Delete your account in the app and it is removed from our database straight away. A session other people had joined is handed on rather than deleted — section 8 lists what stays.</li>
   </ul>
 </div>
 
@@ -41,14 +41,14 @@
 <h2>2. What we collect, and why</h2>
 <table>
   <tr><th>What</th><th>Why</th></tr>
-  <tr><td>Your email address</td><td>To sign you in with a code. There is no password unless you add one in Settings; if you do, our sign-in provider stores only a scrambled (hashed) copy that nobody can read.</td></tr>
+  <tr><td>Your email address</td><td>To sign you in with a code. If you switch on "Email updates" in Settings → Notifications — it is off unless you turn it on — also to send you occasional Sweatch news; none has been sent so far. There is no password unless you add one in Settings; if you do, our sign-in provider stores only a scrambled (hashed) copy that nobody can read.</td></tr>
   <tr><td>Name, username, photo</td><td>So people know who they're playing with.</td></tr>
   <tr><td>Bio, city, gender, activities and level, when you usually play</td><td>To show you on a profile and to match you with sessions. City, gender and date of birth are optional and can be skipped.</td></tr>
   <tr><td>Date of birth (optional)</td><td>Kept so sessions with an age range can be matched to you. That matching isn't built yet, so today it is only stored. Nobody else sees it.</td></tr>
   <tr><td>"Just to play" or "open to meeting new people"</td><td>Changes the order in which people are suggested to you. It isn't displayed on your profile. People who chose "open to meeting new people" are suggested to each other first, and the setting is sent to other members' apps to do that ordering.</td></tr>
   <tr><td>Sessions you post or join, and whether you turned up</td><td>To run the sessions, and to work out your reliability word ("Reliable", "Usually turns up").</td></tr>
   <tr><td>Messages, direct messages, reactions, and a "hi" you send</td><td>To deliver them to the people you sent them to.</td></tr>
-  <tr><td>Who you blocked, and reports you file</td><td>To keep those people away from you, and to act on reports.</td></tr>
+  <tr><td>Who you blocked, and reports you file</td><td>To keep those people away from you, and to act on reports. When someone is reported, we may read the profile, sessions and messages involved to decide what to do.</td></tr>
   <tr><td>Notification settings, and a device token</td><td>To send you a push notification if you turned them on. We store the token with your account so Apple can deliver to your phone. No other member can read it.</td></tr>
   <tr><td>Ratings you give after a session (stars for each player, a score for the session)</td><td>To learn which sessions go well. The person you rate never sees the stars you gave them.</td></tr>
   <tr><td>Whether you've read a direct message, a "typing" signal, and your in-app notification list</td><td>To show "Seen" and "typing…" to the person you're talking to, and to fill your notifications screen.</td></tr>
@@ -60,7 +60,7 @@
 
 <h2>4. Who can see what</h2>
 <p>Only people signed in to Sweatch can see your profile. They see your name, username, photo, bio, city, gender, level, reliability word, activities and usual times. They also see the sessions you've posted or joined: the activity, the time, the venue's name and address, and who else is in. They do not see your date of birth, your email, your notification settings, your device token, or whether you've paused your account.</p>
-<p>If you mark your profile private, people you haven't shared a session with don't see your activities, levels, usual times or recent sessions on your profile page. Your name, username, photo and bio stay visible, you still appear in search with your activities, and you still appear in the player list of any session you join.</p>
+<p>If you mark your profile private, people you haven't shared a session with don't see your activities, levels, usual times or recent sessions on your profile page. Your name, username, city, photo and bio stay visible, you still appear in search with your activities, and you still appear in the player list of any session you join.</p>
 
 <h2>5. Where it's kept</h2>
 <p>Your data is stored with Supabase, our database and file hosting provider, in Frankfurt, Germany (European Union). Photos you upload are stored there too. We read the data from Lebanon to run the service.</p>
@@ -76,11 +76,11 @@
 <p>We only work with providers that protect your data at least as well as this policy does. No advertising networks, no analytics or tracking companies, nothing sold or shared for marketing.</p>
 
 <h2>7. How long we keep it</h2>
-<p>As long as you have an account. A message you set to disappear stops showing in the conversation after 24 hours. It is not yet erased from our database; it goes when you delete your account. When you delete your account, it is removed straight away (next section).</p>
+<p>As long as you have an account. A message you set to disappear stops showing in the conversation after 24 hours. It is not yet erased from our database; it goes when you delete your account. The same goes for a message you delete in a session chat: it shows as "Message deleted", but its text stays in our database until you delete your account. Direct messages can't be deleted one by one yet. When you delete your account, it is removed straight away (next section).</p>
 
 <h2>8. Deleting your account</h2>
-<p>Settings → Account &amp; security → Delete account. It happens immediately, in the app, and removes your account, profile, photos, activities, sessions, messages, direct messages, reactions, blocks, reports and settings. A session you were hosting that other people had already joined is handed to the person who joined first, so their plans survive; a session with nobody else in it is deleted with you. A session you hand over keeps its details, including the note and cost line you wrote. A notification someone else already received about you — that you joined their session, say — stays in their list.</p>
-<p>Copies in our hosting provider's routine backups and logs expire on their own schedule. If you signed in with Apple, also remove Sweatch in iPhone Settings → your name → Sign-In &amp; Security → Sign in with Apple; we can't do that for you yet.</p>
+<p>Settings → Account &amp; security → Delete account. It happens immediately, in the app, and removes your account, profile, photos, activities, sessions, messages, direct messages, reactions, blocks, reports and settings. A session you were hosting that other people had already joined is handed to the person who joined first, so their plans survive, and the session's chat tells the others that the previous host deleted their account; a session with nobody else in it is deleted with you. A session you hand over keeps its details, including the note and cost line you wrote. A notification someone else already received about you — that you joined their session, say — stays in their list.</p>
+<p>Copies in our hosting provider's routine backups and logs expire on their own schedule. If you signed in with Apple, also remove Sweatch in iPhone Settings → your name → Sign in with Apple (on older versions it sits under Sign-In &amp; Security); we can't do that for you yet.</p>
 <p>"Take a break" is different: it hides your profile from other members until the next time you sign in. Sessions you host or have joined stay listed, shown without your name or photo. Nothing is deleted.</p>
 
 <h2>9. Blocking and reporting</h2>
@@ -91,7 +91,7 @@
 <p>Sweatch is for adults, 18 and over. We don't verify ages; if we learn an account belongs to someone younger, we remove it. If you think someone under 18 is on Sweatch, tell us at <a href="mailto:safety@sweatch.app">safety@sweatch.app</a>.</p>
 
 <h2>11. Your rights</h2>
-<p>You can see and edit everything about you in the app, and delete it there. For anything else — a copy of your data, a question, a complaint — email <a href="mailto:support@sweatch.app">support@sweatch.app</a>.</p>
+<p>You can see and edit your profile in the app, and delete your account there. For anything else — a copy of everything we hold about you, a correction, a question, a complaint — email <a href="mailto:support@sweatch.app">support@sweatch.app</a>.</p>
 <p>You can turn off location, notifications, camera or photos for Sweatch in iPhone Settings at any time; the app keeps working. If you can't use the app, email support@sweatch.app from your account's address and we'll delete your account within 30 days. If you live in the EU or the UK, you can also complain to your local data protection authority.</p>
 
 <h2>12. Changes</h2>
